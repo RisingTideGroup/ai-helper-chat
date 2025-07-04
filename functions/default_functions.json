@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Get Open Tickets",
+    "description": "Fetches all open tickets from HaloPSA",
+    "method": "GET",
+    "endpoint": "/api/tickets",
+    "params": {
+      "status": "open",
+      "count": "50"
+    }
+  },
+  {
+    "name": "Get Tickets by User",
+    "description": "Fetches tickets assigned to a specific user",
+    "method": "GET",
+    "endpoint": "/api/tickets",
+    "params": {
+      "assigned_user": "{user_id}",
+      "count": "50"
+    }
+  },
+  {
+    "name": "Create Ticket",
+    "description": "Creates a new ticket in HaloPSA",
+    "method": "POST",
+    "endpoint": "/api/tickets",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "subject": "{subject}",
+      "details": "{details}",
+      "user_id": "{user_id}",
+      "client_id": "{client_id}"
+    }
+  },
+  {
+    "name": "Get Clients",
+    "description": "Fetches all clients from HaloPSA",
+    "method": "GET",
+    "endpoint": "/api/clients",
+    "params": {
+      "count": "100"
+    }
+  },
+  {
+    "name": "Get Client Details",
+    "description": "Fetches detailed information for a specific client",
+    "method": "GET",
+    "endpoint": "/api/clients/{client_id}"
+  },
+  {
+    "name": "Get Users",
+    "description": "Fetches all users from HaloPSA",
+    "method": "GET",
+    "endpoint": "/api/users",
+    "params": {
+      "count": "100"
+    }
+  },
+  {
+    "name": "Update Ticket Status",
+    "description": "Updates the status of an existing ticket",
+    "method": "PUT",
+    "endpoint": "/api/tickets/{ticket_id}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "status": "{status}"
+    }
+  },
+  {
+    "name": "Get Ticket History",
+    "description": "Fetches the history/actions for a specific ticket",
+    "method": "GET",
+    "endpoint": "/api/tickets/{ticket_id}/actions"
+  },
+  {
+    "name": "Get Assets",
+    "description": "Fetches assets/configuration items from HaloPSA",
+    "method": "GET",
+    "endpoint": "/api/assets",
+    "params": {
+      "count": "100"
+    }
+  },
+  {
+    "name": "Get Contracts",
+    "description": "Fetches contracts from HaloPSA",
+    "method": "GET",
+    "endpoint": "/api/contracts",
+    "params": {
+      "count": "50"
+    }
+  }
+]

@@ -1,0 +1,1 @@
+import{c as e,j as o,M as t}from"./globals.js";const a=e(document.getElementById("chat-root"));a.render(o.jsx("div",{className:"w-[360px] min-w-[320px] max-w-full mx-auto overflow-hidden",children:o.jsx(t,{})}));
